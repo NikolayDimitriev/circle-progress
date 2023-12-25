@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progress Bar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/index.js"></script>
+  </head>
+  <body>
+    <div class="overlay">
+      <h1 class="title">Progress</h1>
+
+      <div class="content">
+        <div class="progress">
+          <svg class="progress-ring animation--stop" width="120" height="120">
+            <circle
+              stroke="#dfd9d9"
+              stroke-width="10"
+              fill="transparent"
+              r="52"
+              cx="60"
+              cy="60"
+            />
+            <circle
+              class="progress-ring__circle"
+              stroke-width="10"
+              fill="transparent"
+              r="52"
+              cx="60"
+              cy="60"
+            />
+          </svg>
+        </div>
+
+        <div class="settings">
+          <div class="settings__wrapper">
+            <div class="settings__property">
+              <input
+                type="text"
+                class="input"
+                min="0"
+                max="100"
+                value="30"
+                id="valueInput"
+              />
+              <label for="valueInput">Value</label>
+            </div>
+            <div class="settings__property toggler">
+              <label class="toggler__wrapper">
+                <input type="checkbox" id="animateToggle" />
+                <div class="toggler__slider">
+                  <div class="toggler__knob"></div>
+                </div>
+              </label>
+              <label for="animateToggle">Animate</label>
+            </div>
+            <div class="settings__property toggler">
+              <label class="toggler__wrapper">
+                <input type="checkbox" id="hideToggle" />
+                <div class="toggler__slider">
+                  <div class="toggler__knob"></div>
+                </div>
+              </label>
+              <label for="hideToggle">Hide</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
